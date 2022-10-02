@@ -6,9 +6,10 @@ from fpdf import FPDF
 from flask import Flask, request, render_template
 import numpy as np
 import pickle
+from flask_cors import CORS
 
 app = Flask(__name__)
-
+CORS(app)
 # prediction function
 def CropPredictor(to_predict_list):
     to_predict = np.array([to_predict_list])
