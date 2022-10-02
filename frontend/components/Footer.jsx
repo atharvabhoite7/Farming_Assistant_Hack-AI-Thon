@@ -27,11 +27,11 @@ const Footer = () => {
               Licensing
             </a>
           </li>
-          <li>
+          {/* <li>
             <a href="#" className="hover:underline">
               Contact
             </a>
-          </li>
+          </li> */}
         </ul>
       </div>
     </div>
