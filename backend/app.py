@@ -1,5 +1,6 @@
 from __future__ import print_function
 import json
+from flask_cors import CORS
 
 # import requests
 from fpdf import FPDF
@@ -8,6 +9,7 @@ import numpy as np
 import pickle
 
 app = Flask(__name__)
+CORS(app)
 
 # prediction function
 def CropPredictor(to_predict_list):
