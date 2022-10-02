@@ -18,9 +18,9 @@ const Navbar = () => {
                       className="mr-3 h-12 animate-pulse sm:h-24"
                       height={95}
                       width={95}
-                      alt="QuestIT Logo"
+                      alt="Demeter Logo"
                     />
-                   <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+                   <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Demeter</span>
                   </a>
                 </div>
                 <div
@@ -30,7 +30,7 @@ const Navbar = () => {
                   <ul className="absolute right-0 top-7 flex flex-col rounded-lg border border-gray-100 bg-gray-50 mr-7 mb-3 dark:border-gray-700 dark:bg-gray-800 md:mt-0 md:flex-row md:space-x-8 md:border-0 md:bg-white md:text-sm md:font-medium md:dark:bg-cyan-900">
                     <li>
                       <a
-                        href="#"
+                        href="/"
                         className="duration-0 block rounded py-2 pr-4 pl-3 text-xl text-gray-100 transition hover:scale-125 hover:bg-gray-100 hover:duration-150 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent md:dark:hover:text-white"
                         aria-current="page"
                       >
@@ -47,26 +47,34 @@ const Navbar = () => {
                                         </li> */}
                     <li>
                       <a
-                        href="#"
+                        href="/Disease"
                         className="block rounded py-2 pr-4 pl-3 text-xl text-gray-100 hover:scale-125 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent md:dark:hover:text-white"
                       >
-                        Council
+                        Disease
                       </a>
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="/Crop"
                         className="block rounded py-2 pr-4 pl-3 text-xl text-gray-100 hover:scale-125 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent md:dark:hover:text-white"
                       >
-                        Events
+                        Crop
                       </a>
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="/Fertilizer"
                         className="block rounded py-2 pr-4 pl-3 text-xl text-gray-100 hover:scale-125 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent md:dark:hover:text-white"
                       >
-                        Contact Us
+                        Fertilizer
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="/Profit"
+                        className="block rounded py-2 pr-4 pl-3 text-xl text-gray-100 hover:scale-125 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent md:dark:hover:text-white"
+                      >
+                        Profit
                       </a>
                     </li>
                   </ul>
@@ -140,7 +148,7 @@ const Navbar = () => {
               <div className="md:hidden" id="mobile-menu">
                 <div ref={ref} className="space-y-1 px-2 pt-2 pb-3 sm:px-3">
                   <a
-                    href="#"
+                    href="/"
                     className="block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-gray-700"
                   >
                     Home
@@ -154,24 +162,30 @@ const Navbar = () => {
                                     </a> */}
 
                   <a
-                    href="#"
+                    href="/Disease"
                     className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
                   >
-                    Council
+                    Disease
                   </a>
 
                   <a
-                    href="#"
+                    href="/Crop"
                     className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
                   >
-                    Events
+                    Crop
                   </a>
 
                   <a
-                    href="#"
+                    href="/Fertilizer"
                     className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
                   >
-                    Contact Us
+                    Fertilizer
+                  </a>
+                  <a
+                    href="/Profit"
+                    className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                  >
+                    Profit
                   </a>
                 </div>
               </div>

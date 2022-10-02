@@ -1,9 +1,12 @@
 import React, { FC } from "react";
 import Head from "next/head";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 const Layout = ({ title, content, children }) => {
     return (
         <>
+        <Navbar/>
             <Head>
                 <title>{title}</title>
                 <meta name="description" content={content} />
@@ -13,6 +16,8 @@ const Layout = ({ title, content, children }) => {
                 />
             </Head>
             <div className="">{children}</div>
+            
+            <Footer/>
         </>
     );
 };
