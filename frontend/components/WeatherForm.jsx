@@ -11,6 +11,8 @@ const WeatherForm = () => {
         relative_humidity: 0,
     });
 
+    const [output, setOutput] = useState(null);
+
     const handleChange = (event) => {
         setFormData((prevState) => {
             return {
@@ -23,7 +25,6 @@ const WeatherForm = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log(formData);
-        let data = null;
 
         axios
             .post("http://127.0.0.1:5000/weather-predict", {
@@ -34,8 +35,8 @@ const WeatherForm = () => {
                 relative_humidity: Number(formData.relative_humidity),
             })
             .then(function (response) {
-                data = response.data.data;
-                console.log(data);
+                setOutput(response.data.data);
+                console.log(output);
             })
             .catch(function (error) {
                 console.log(error);
@@ -155,6 +156,15 @@ const WeatherForm = () => {
                 >
                     SUBMIT
                 </button>
+                {output && (
+                    <div
+                        class="mt-5 p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg dark:bg-green-200 dark:text-green-800"
+                        role="alert"
+                    >
+                        <span class="font-medium">Predicted temperature:</span>
+                        {output}
+                    </div>
+                )}
             </form>
         </div>
     );
