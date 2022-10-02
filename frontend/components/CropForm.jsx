@@ -59,7 +59,7 @@ const CropForm = () => {
     };
     return (
         <div>
-            <div className="flex items-center justify-center mt-10">
+            <div className="flex items-center justify-center mt-5">
                 <form onSubmit={handleSubmit} className="w-full max-w-lg">
                     <div className="flex flex-wrap -mx-3 mb-6">
                         <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
@@ -213,7 +213,7 @@ const CropForm = () => {
                     </div>
                     {output && (
                         <div
-                            class="mt-5 p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg dark:bg-green-200 dark:text-green-800"
+                            class="mt-2 p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg dark:bg-green-200 dark:text-green-800"
                             role="alert"
                         >
                             <span class="font-medium">Recommended Crop: </span>

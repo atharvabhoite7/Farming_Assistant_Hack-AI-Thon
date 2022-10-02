@@ -61,9 +61,10 @@ const Fertilizer = () => {
     };
     return (
         <div>
-            <Layout />
-
-            <div className="flex items-center justify-center mt-10">
+            <Layout >
+            <h1 className="text-2xl font-semibold text-center mt-3">Know which fertilizer to use</h1>
+             
+            <div className="flex items-center justify-center mt-5 mb-30">
                 <form onSubmit={handleSubmit} className="w-full max-w-lg">
                     <div className="flex flex-wrap -mx-3 mb-6">
                         <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
@@ -285,6 +286,7 @@ const Fertilizer = () => {
                     </div>
                 </form>
             </div>
+            </Layout>
         </div>
     );
 };

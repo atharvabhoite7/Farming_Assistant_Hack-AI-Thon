@@ -71,14 +71,14 @@ const Navbar = () => {
                                                 Fertilizer
                                             </a>
                                         </li>
-                                        <li>
+                                        {/* <li>
                                             <a
                                                 href="/Profit"
                                                 className="duration-0 block rounded py-2 pr-4 pl-3 text-xl text-gray-100 transition hover:scale-125 hover:bg-gray-100 hover:duration-150 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent md:dark:hover:text-white"
                                             >
                                                 Profit
                                             </a>
-                                        </li>
+                                        </li> */}
                                         <li>
                                             <a
                                                 href="/Weather"
@@ -196,12 +196,20 @@ const Navbar = () => {
                                     >
                                         Fertilizer
                                     </a>
-                                    <a
+                                    {/* <a
                                         href="/Profit"
                                         className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
                                     >
                                         Profit
-                                    </a>
+                                    </a> */}
+                                     
+                                            <a
+                                                href="/Weather"
+                                                className="duration-0 block rounded py-2 pr-4 pl-3 text-xl text-gray-100 transition hover:scale-125 hover:bg-gray-100 hover:duration-150 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent md:dark:hover:text-white"
+                                            >
+                                                Weather
+                                            </a>
+                                      
                                 </div>
                             </div>
                         )}

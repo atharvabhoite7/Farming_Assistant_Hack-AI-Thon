@@ -93,21 +93,21 @@ const HomeContent = () => {
           <div class="shadow hover:shadow-md w-full bg-white rounded-lg overflow-hidden cursor-pointer">
             <img
               class="object-cover w-full h-48"
-              src="https://res.cloudinary.com/atharva7/image/upload/v1664685601/samples/profitimg_pu7yze.jpg"
+              src="https://res.cloudinary.com/atharva7/image/upload/v1664701500/samples/weatherimg_uqrzpx.jpg"
               alt="Flower and sky"
             />
 
             <div class="relative p-4">
               <h3 class="text-base md:text-xl font-medium text-gray-800">
-                Profit
+                Weather
               </h3>
 
               <p class="mt-2 mb-5 text-base md:text-lg text-gray-600">
-                Profit is the major driving force for any type of occupation.
-                Maximize profits to greatest with predictions from Demeter.
+                Weather plays an important role in Agriculture.
+                Know the weather with predictions from Demeter.
               </p>
               <button className="absolute bottom-0 right-0 mr-2 mb-1 mt-10 bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded-full">
-                <Link href="/Profit">Predict</Link>
+                <Link href="/Weather">Predict</Link>
               </button>
             </div>
           </div>

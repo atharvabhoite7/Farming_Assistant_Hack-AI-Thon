@@ -51,7 +51,7 @@ const WeatherForm = () => {
     };
 
     return (
-        <div className="container mx-auto mt-7">
+        <div className="container mx-auto mt-5">
             <form onSubmit={handleSubmit} class="w-full max-w-lg mx-auto">
                 <div class="flex flex-wrap -mx-3 mb-6">
                     <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
@@ -158,7 +158,7 @@ const WeatherForm = () => {
                 </button>
                 {output && (
                     <div
-                        class="mt-5 p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg dark:bg-green-200 dark:text-green-800"
+                        className="mt-5 p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg dark:bg-green-200 dark:text-green-800"
                         role="alert"
                     >
                         <span class="font-medium">Predicted temperature: </span>
