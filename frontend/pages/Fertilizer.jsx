@@ -1,6 +1,7 @@
 import React from 'react'
 import Layout from '../components/Layout'
 import { useState } from 'react';
+import axios from 'axios';
 const Fertilizer = () => {
   
   const [formData, setFormData] = useState({
@@ -27,18 +28,27 @@ const Fertilizer = () => {
     let data = null;
 
    
-
-    axios
-      .post("http://127.0.0.1:5000/fertilizerPredict", {
-        Temp: formData.Temp,
-        Hum: formData.Hum,
-        Moist: formData.Moist,
-        Soil: formData.Soil,
-        Crop: formData.Crop,
-        N: formData.N,
-        K: formData.K,
-        P: formData.P
-      })
+    const ferti_json = JSON.stringify({ 
+      Temp: formData.Temp,
+      Hum: formData.Hum,
+      Moist: formData.Moist,
+      Soil: formData.Soil,
+      Crop: formData.Crop,
+      N: formData.N,
+      K: formData.K,
+      P: formData.P
+     });
+    axios.post("http://127.0.0.1:5000/fertilizerPredict",ferti_json)
+      // .post("http://127.0.0.1:5000/fertilizerPredict", {
+      //   Temp: formData.Temp,
+      //   Hum: formData.Hum,
+      //   Moist: formData.Moist,
+      //   Soil: formData.Soil,
+      //   Crop: formData.Crop,
+      //   N: formData.N,
+      //   K: formData.K,
+      //   P: formData.P
+      // })
       .then(function (response) {
         data = response.data.data;
         console.log(data);
@@ -69,14 +79,14 @@ const Fertilizer = () => {
               <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
                 Temperature
               </label>
-              <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-none-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="number" placeholder="temperature" name="temperature" required min="-10" max="50" onChange={handleChange} value={formData.Temp}/>
+              <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-none-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="number" placeholder="temperature" name="Temp" required min="-10" max="50" onChange={handleChange}  value={formData.Temp}/>
 
             </div>
             <div className="w-full md:w-1/2 px-3">
               <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
                 Humidity
               </label>
-              <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="number" placeholder="Humidity" required min="0" max="100" onChange={handleChange} value={formData.Hum}/>
+              <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="number" placeholder="Humidity" required min="0" max="100" onChange={handleChange} value={formData.Hum} name="Hum"/>
             </div>
           </div>
           <div className="flex flex-wrap -mx-3 mb-6">
@@ -84,14 +94,14 @@ const Fertilizer = () => {
               <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
                 Moisture
               </label>
-              <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-none-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="number" placeholder="Moisture" name="Moisture" required min="0" max="100" onChange={handleChange} value={formData.Moist}/>
+              <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-none-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="number" placeholder="Moisture" name="Moist" required min="0" max="100" onChange={handleChange} value={formData.Moist}/>
 
             </div>
             <div className="w-full md:w-1/2 px-3">
               <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
                 Nitrogen
               </label>
-              <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="number" placeholder="Nitrogen" name="Nitrogen" required min="0" max="100" onChange={handleChange} value={formData.N} />
+              <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="number" placeholder="Nitrogen" name="N" required min="0" max="100" onChange={handleChange} value={formData.N} />
             </div>
           </div>
           <div className="flex flex-wrap -mx-3 mb-6">
@@ -99,14 +109,14 @@ const Fertilizer = () => {
               <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
                 Potassium
               </label>
-              <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-none-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="number" placeholder="Potassium" name="Potassium" required min="0" max="100" onChange={handleChange}  value={formData.K }/>
+              <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-none-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="number" placeholder="Potassium" name="K" required min="0" max="100" onChange={handleChange}  value={formData.K }/>
 
             </div>
             <div className="w-full md:w-1/2 px-3">
               <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
                 Phosphorus
               </label>
-              <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="number" placeholder="Phosphorus" name="Phosphorus" required min="0" max="100" onChange={handleChange} value={formData.P}/>
+              <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="number" placeholder="Phosphorous" name="P" required min="0" max="100" onChange={handleChange} value={formData.P}/>
             </div>
           </div>
 
