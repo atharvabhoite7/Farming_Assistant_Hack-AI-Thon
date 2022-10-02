@@ -1,12 +1,13 @@
-import React from 'react'
-import Layout from '../components/Layout'
+import React from "react";
+import CropForm from "../components/CropForm";
+import Layout from "../components/Layout";
 
 const Crop = () => {
-  return (
-    <div>
-        <Layout/>
-    </div>
-  )
-}
+    return (
+        <Layout>
+            <CropForm />
+        </Layout>
+    );
+};
 
-export default Crop
+export default Crop;
