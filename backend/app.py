@@ -119,7 +119,7 @@ def DiseasesPredictor(img, model=disease_model):
 
 
 # routing
-@app.route("/cropPredict", methods=["POST"])
+@app.route("/crop-predict", methods=["POST"])
 def result():
     if request.method == "POST":
         print(request.json)
@@ -130,7 +130,7 @@ def result():
         return result
 
 
-@app.route("/fertilizerPredict", methods=["POST"])
+@app.route("/fertilizer-predict", methods=["POST"])
 def result2():
     if request.method == "POST":
         print(request.json)
