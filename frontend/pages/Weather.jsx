@@ -5,7 +5,7 @@ import Layout from "../components/Layout";
 const Weather = () => {
     return (
         <div>
-            <Layout>
+            <Layout title="Weather" content="Find the temperature of next day">
                 <h1 className="text-3xl font-semibold text-center mt-3">
                     Predict the Temperature
                 </h1>

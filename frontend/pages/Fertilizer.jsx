@@ -61,7 +61,10 @@ const Fertilizer = () => {
     };
     return (
         <div>
-            <Layout>
+            <Layout
+                title="Fertilizer"
+                content="Find fertilizer suitable for a particular condition"
+            >
                 <h1 className="text-2xl font-semibold text-center mt-3">
                     Know which fertilizer to use
                 </h1>
