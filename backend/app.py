@@ -138,7 +138,7 @@ def result2():
         elif ans == 1:
             return "14-35-14"
         elif ans == 2:
-            return "17-17-17	"
+            return "17-17-17"
         elif ans == 3:
             return "20-20"
         elif ans == 4:
@@ -147,6 +147,7 @@ def result2():
             return "DAP"
         else:
             return "Urea"
+            
 
 
 @app.route("/weather-predict", methods=["POST"])

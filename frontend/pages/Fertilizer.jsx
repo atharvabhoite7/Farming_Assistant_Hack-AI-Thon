@@ -28,27 +28,18 @@ const Fertilizer = () => {
     let data = null;
 
    
-    const ferti_json = JSON.stringify({ 
-      Temp: formData.Temp,
-      Hum: formData.Hum,
-      Moist: formData.Moist,
-      Soil: formData.Soil,
-      Crop: formData.Crop,
-      N: formData.N,
-      K: formData.K,
-      P: formData.P
-     });
-    axios.post("http://127.0.0.1:5000/fertilizerPredict",ferti_json)
-      // .post("http://127.0.0.1:5000/fertilizerPredict", {
-      //   Temp: formData.Temp,
-      //   Hum: formData.Hum,
-      //   Moist: formData.Moist,
-      //   Soil: formData.Soil,
-      //   Crop: formData.Crop,
-      //   N: formData.N,
-      //   K: formData.K,
-      //   P: formData.P
-      // })
+  
+    axios
+      .post("http://127.0.0.1:5000/fertilizerPredict", {
+        Temp: Number(formData.Temp),
+        Hum: Number(formData.Hum),
+        Moist: Number(formData.Moist),
+        Soil: Number(formData.Soil),
+        Crop: Number(formData.Crop),
+        N: Number(formData.N),
+        K: Number(formData.K),
+        P: Number(formData.P)
+      })
       .then(function (response) {
         data = response.data.data;
         console.log(data);
