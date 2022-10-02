@@ -5,7 +5,7 @@ import Layout from "../components/Layout";
 const Disease = () => {
     return (
         <div>
-            <Layout>
+            <Layout title="Disease" content="Find if a crop is diseased or not">
                 <DiseaseForm />
             </Layout>
         </div>

@@ -4,7 +4,10 @@ import Layout from "../components/Layout";
 
 const Crop = () => {
     return (
-        <Layout>
+        <Layout
+            title="Crop"
+            content="Find crop suitable to particular conditions"
+        >
             <CropForm />
         </Layout>
     );

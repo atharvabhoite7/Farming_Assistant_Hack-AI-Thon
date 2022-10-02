@@ -5,7 +5,7 @@ import Layout from "../components/Layout";
 const Weather = () => {
     return (
         <div>
-            <Layout>
+            <Layout title="Weather" content="Find the temperature of next day">
                 <WeatherForm />
             </Layout>
         </div>
